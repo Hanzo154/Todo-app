@@ -1,0 +1,149 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 600px;
+  margin: 50px auto 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.App h1 {
+  background-color: #3ac5c9;
+  padding: 10px 15px;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.todoList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todoInput {
+  position: relative;
+  overflow: hidden;
+}
+.todoInput span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 35px;
+  border-radius: 50%;
+  color: #3ac5c9;
+}
+.todoInput input {
+  font-size: 18px;
+  width: 100%;
+  padding: 13px 30px 13px 20px;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+.todoInput input:focus {
+  outline: none;
+}
+
+.todo {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.todo span,
+.todo input {
+  font-size: 16px;
+}
+
+.todo .todo__btnDelete {
+  text-align: center;
+  background-color: #3ac5c9;
+  color: white;
+  height: 40px;
+  width: 0;
+  display: inline-block;
+  transition: all 0.5s;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.todo .todo__btnDelete:hover {
+  background-color: red;
+  color: white;
+}
+
+.todo__edit {
+  width: 90%;
+  height: 100%;
+  border: transparent;
+  padding: 0;
+}
+
+.todo__edit:focus {
+  outline: none;
+}
+
+.todoFilter {
+  position: relative;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+.todoFilter span {
+  float: left;
+}
+
+.todoFilter button {
+  background-color: white;
+  border: 0;
+  font-size: 16px;
+}
+
+.todoFilter button:focus {
+  outline: none;
+}
+.todoFilter__status {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todoFilter__status button {
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  margin: 0 10px;
+}
+
+.todoFilter__status button:hover {
+  border: 1px solid #3ac5c9;
+}
+
+.todoFilter__delete {
+  float: right;
+}
+
+.todoFilter__delete::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #3ac5c9;
+  display: block;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todoFilter__delete:hover::after {
+  opacity: 1;
+}
+
+.todoFilter .activeMenu {
+  border: 1px solid #3ac5c9;
+}
